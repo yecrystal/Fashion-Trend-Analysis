@@ -1,6 +1,6 @@
 from tensorflow.keras.models import Model, load_model
 from sklearn.preprocessing import StandardScaler
-import sklearn.decomposition import PCA 
+from sklearn.decomposition import PCA 
 import pandas as pd
 import numpy as np
 import cv2
