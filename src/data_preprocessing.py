@@ -102,4 +102,18 @@ def save_data(df: pd.DataFrame, df_comments: pd.DateFrame) -> None:
     
     df.to_csv("data/processed_data.csv", index=False)
     df_comments.to_csv("data/processed_comments.csv", index=False, sep=';')
+
+def main():
+    path = "data/posts_1.json"
+    path2 = "data/posts_2.json"
+
+    # Read, process and save the data
+    df_1 = read_data(path)
+    df_2 = read_data(path2)
+    df = pd.concat([df_1, df_2])
+    df, df_comments = process_data(df)
+    save_data(df, df_comments)
     
+    
+if __name__ == "__main__":
+    main()
